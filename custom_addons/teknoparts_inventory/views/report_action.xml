@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- PDF Kartu Stock -->
+  <record id="action_report_kartu_stock" model="ir.actions.report">
+    <field name="name">Kartu Stock</field>
+    <field name="model">tpart.part</field>
+    <field name="report_type">qweb-pdf</field>
+    <field name="report_name">teknoparts_inventory.kartu_stock_template</field>
+    <field name="report_file">teknoparts_inventory.kartu_stock_template</field>
+    <field name="binding_model_id" ref="model_tpart_part"/>
+    <field name="binding_type">report</field>
+  </record>
+
+  <!-- PDF QC Failure -->
+  <record id="action_report_qc_failure" model="ir.actions.report">
+    <field name="name">QC Failure Report</field>
+    <field name="model">tpart.qc.check</field>
+    <field name="report_type">qweb-pdf</field>
+    <field name="report_name">teknoparts_inventory.qc_failure_template</field>
+    <field name="report_file">teknoparts_inventory.qc_failure_template</field>
+    <field name="binding_model_id" ref="model_tpart_qc_check"/>
+    <field name="binding_type">report</field>
+  </record>
+
+  <!-- Excel Aging -->
+  <record id="action_report_aging_xlsx" model="ir.actions.report">
+    <field name="name">Aging Report (Excel)</field>
+    <field name="model">tpart.part</field>
+    <field name="report_type">xlsx</field>
+    <field name="report_name">teknoparts_inventory.aging_xlsx</field>
+    <field name="binding_model_id" ref="model_tpart_part"/>
+  </record>
+</odoo>

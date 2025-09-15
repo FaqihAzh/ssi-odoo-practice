@@ -16,7 +16,9 @@
           <field name="picking_id" invisible="1"/>
           <field name="part_id"/>
           <field name="qty_check"/>
-        </group>
+          <field name="qty_pass"/>
+          <field name="qty_fail"/>
+      </group>
         <footer>
           <button name="action_create_qc" type="object" string="Create QC" class="oe_highlight"/>
           <button string="Cancel" class="oe_link" special="cancel"/>

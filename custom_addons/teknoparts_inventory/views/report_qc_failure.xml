@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <template id="qc_failure_template">
+    <t t-call="web.html_container">
+      <t t-foreach="docs" t-as="o">
+        <div class="page">
+          <h2>QC Failure Report</h2>
+          <table class="table table-sm">
+            <tr><td>Reference</td><td><span t-field="o.name"/></td></tr>
+            <tr><td>Supplier</td><td><span t-field="o.receipt_id.partner_id"/></td></tr>
+            <tr><td>Part</td><td><span t-field="o.part_id.name"/></td></tr>
+            <tr><td>Qty Fail</td><td><span t-field="o.qty_fail"/></td></tr>
+          </table>
+        </div>
+      </t>
+    </t>
+  </template>
+</odoo>

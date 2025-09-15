@@ -25,9 +25,10 @@
     <field name="inherit_id" ref="stock.view_picking_form"/>
     <field name="arch" type="xml">
       <header position="inside">
-        <button name="%(action_qc_check_wizard)d" type="action"
+        <button name="%(teknoparts_inventory.action_qc_check_wizard)d" type="action"
                 string="Create QC" class="oe_highlight"
-                invisible="x_is_qc_required = False or state != 'done'"/>
+                invisible="not x_is_qc_required or state != 'done'"
+                context="{'default_picking_id': active_id}"/>
       </header>
       <field name="origin" position="after">
         <field name="x_is_qc_required" invisible="1"/>
@@ -37,16 +38,16 @@
   </record>
 
   <!-- 3. Purchase.order.line tree -->
-  <record id="view_purchase_order_line_tree_tpart" model="ir.ui.view">
-    <field name="name">purchase.order.line.tree.tpart</field>
+  <record id="view_purchase_order_form_inherit_tpart" model="ir.ui.view">
+    <field name="name">purchase.order.form.inherit.tpart</field>
     <field name="model">purchase.order</field>
-    <field name="inherit_id" ref="purchase.purchase_order_view_tree"/>
+    <field name="inherit_id" ref="purchase.purchase_order_form"/>
     <field name="arch" type="xml">
-      <field name="product_id" position="after">
+      <xpath expr="//field[@name='order_line']//tree//field[@name='product_id']" position="after">
         <field name="x_part_id" optional="show"/>
         <field name="x_brand" optional="show"/>
         <field name="x_model_hp" optional="show"/>
-      </field>
+      </xpath>
     </field>
   </record>
 </odoo>

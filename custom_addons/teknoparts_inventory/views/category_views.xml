@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Category Tree View -->
+  <record id="view_tpart_category_tree" model="ir.ui.view">
+    <field name="name">tpart.category.tree</field>
+    <field name="model">tpart.category</field>
+    <field name="arch" type="xml">
+      <tree string="Categories">
+        <field name="name"/>
+        <field name="parent_id"/>
+        <field name="part_count"/>
+      </tree>
+    </field>
+  </record>
+
+  <!-- Category Form View -->
+  <record id="view_tpart_category_form" model="ir.ui.view">
+    <field name="name">tpart.category.form</field>
+    <field name="model">tpart.category</field>
+    <field name="arch" type="xml">
+      <form string="Part Category">
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="parent_id"/>
+          </group>
+          <notebook>
+            <page string="Child Categories">
+              <field name="child_ids"/>
+            </page>
+            <page string="Parts">
+              <field name="part_ids"/>
+            </page>
+          </notebook>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <!-- Category Action -->
+  <record id="action_tpart_category" model="ir.actions.act_window">
+    <field name="name">Categories</field>
+    <field name="res_model">tpart.category</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <!-- Category Menu -->
+  <menuitem id="menu_tpart_category" name="Categories"
+            parent="menu_teknoparts_root"
+            action="action_tpart_category"
+            sequence="15"/>
+</odoo>
