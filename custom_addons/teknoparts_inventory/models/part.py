@@ -1,6 +1,7 @@
 from odoo import api, fields, models, _
 from odoo.exceptions import ValidationError
 
+
 class TpartPart(models.Model):
     _name = 'tpart.part'
     _description = 'Spare Part HP'
@@ -28,7 +29,7 @@ class TpartPart(models.Model):
         ('refurb', 'Refurbished')
     ], string='Type', required=True)
     uom_id = fields.Many2one('uom.uom', string='Unit of Measure',
-                             default=lambda self: self.env.ref('uom.product_uom_unit'))
+                             default=lambda self: self.env.ref('uom.product_uom_unit', raise_if_not_found=False))
     warranty_month = fields.Integer(string='Warranty (Month)', default=0)
     active = fields.Boolean(default=True)
     image = fields.Image()
@@ -56,13 +57,18 @@ class TpartPart(models.Model):
     ]
 
     # -------- COMPUTE ----------
-    @api.depends()
+    @api.depends('product_id')
     def _compute_qty(self):
         for rec in self:
-            product = rec.product_id.product_variant_id
-            rec.qty_on_hand = product.qty_available if product else 0
-            rec.qty_reserved = product.outgoing_qty if product else 0
-            rec.qty_available = rec.qty_on_hand - rec.qty_reserved
+            if rec.product_id and rec.product_id.product_variant_ids:
+                product = rec.product_id.product_variant_ids[0]
+                rec.qty_on_hand = product.qty_available or 0.0
+                rec.qty_reserved = product.outgoing_qty or 0.0
+                rec.qty_available = rec.qty_on_hand - rec.qty_reserved
+            else:
+                rec.qty_on_hand = 0.0
+                rec.qty_reserved = 0.0
+                rec.qty_available = 0.0
 
     # -------- ONCHANGE ----------
     @api.onchange('brand')
@@ -71,10 +77,10 @@ class TpartPart(models.Model):
 
     # -------- STATE BUTTON ----------
     def action_approve(self):
-        self.write({'state': 'approved'})
-        self._create_or_update_product()
-        # tambahan: isi link balik
         for rec in self:
+            rec.write({'state': 'approved'})
+            rec._create_or_update_product()
+            # Link back to product
             if rec.product_id:
                 rec.product_id.write({
                     'x_is_spare_part': True,
@@ -87,23 +93,41 @@ class TpartPart(models.Model):
 
     # -------- DUPLICATE KE PRODUCT.TEMPLATE ----------
     def _create_or_update_product(self):
+        """Create product.template record linked to this part"""
         Product = self.env['product.template']
         for rec in self:
             if rec.product_id:
                 continue
-            product = Product.create({
+
+            # Get default UOM if not set
+            uom = rec.uom_id or self.env.ref('uom.product_uom_unit', raise_if_not_found=False)
+
+            vals = {
                 'name': rec.name,
                 'default_code': rec.part_number,
-                'barcode': rec.barcode,
                 'type': 'product',
-                'uom_id': rec.uom_id.id,
-                'uom_po_id': rec.uom_id.id,
-                'list_price': 0,
-                'standard_price': 0,
+                'categ_id': self.env.ref('product.product_category_all', raise_if_not_found=False).id,
+                'list_price': 0.0,
+                'standard_price': 0.0,
                 'x_is_spare_part': True,
                 'x_part_id': rec.id,
-            })
-            rec.product_id = product
+                'x_qc_required': True,
+            }
+
+            if rec.barcode:
+                vals['barcode'] = rec.barcode
+            if uom:
+                vals['uom_id'] = uom.id
+                vals['uom_po_id'] = uom.id
+
+            try:
+                product = Product.create(vals)
+                rec.product_id = product.id
+            except Exception as e:
+                # Log error but don't break the flow
+                import logging
+                _logger = logging.getLogger(__name__)
+                _logger.error(f"Error creating product for part {rec.name}: {e}")
 
     def open_form_detail(self):
         self.ensure_one()
