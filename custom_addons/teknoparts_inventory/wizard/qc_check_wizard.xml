@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="action_qc_check_wizard" model="ir.actions.act_window">
+    <field name="name">Quick QC</field>
+    <field name="res_model">tpart.qc.check.wizard</field>
+    <field name="view_mode">form</field>
+    <field name="target">new</field>
+  </record>
+
+  <record id="view_qc_check_wizard_form" model="ir.ui.view">
+    <field name="name">qc.check.wizard.form</field>
+    <field name="model">tpart.qc.check.wizard</field>
+    <field name="arch" type="xml">
+      <form string="Quick QC">
+        <group>
+          <field name="picking_id" invisible="1"/>
+          <field name="part_id"/>
+          <field name="qty_check"/>
+        </group>
+        <footer>
+          <button name="action_create_qc" type="object" string="Create QC" class="oe_highlight"/>
+          <button string="Cancel" class="oe_link" special="cancel"/>
+        </footer>
+      </form>
+    </field>
+  </record>
+</odoo>

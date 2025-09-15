@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="seq_qc_check" model="ir.sequence">
+    <field name="name">QC Check</field>
+    <field name="code">tpart.qc.check</field>
+    <field name="prefix">QC/%(year)s/</field>
+    <field name="padding">4</field>
+  </record>
+</odoo>

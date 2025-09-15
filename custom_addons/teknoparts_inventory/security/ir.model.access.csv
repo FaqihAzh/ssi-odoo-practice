@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_tpart_part_admin,tpart.part.admin,model_tpart_part,teknoparts_inventory.group_teknoparts_admin,1,1,1,1
+access_tpart_part_user,tpart.part.user,model_tpart_part,teknoparts_inventory.group_teknoparts_user,1,1,1,0
+access_tpart_part_viewer,tpart.part.viewer,model_tpart_part,teknoparts_inventory.group_teknoparts_viewer,1,0,0,0
+
+access_tpart_category_admin,tpart.category.admin,model_tpart_category,teknoparts_inventory.group_teknoparts_admin,1,1,1,1
+access_tpart_category_user,tpart.category.user,model_tpart_category,teknoparts_inventory.group_teknoparts_user,1,1,1,0
+access_tpart_category_viewer,tpart.category.viewer,model_tpart_category,teknoparts_inventory.group_teknoparts_viewer,1,0,0,0
+
+access_tpart_qc_check_admin,qc.check.admin,model_tpart_qc_check,teknoparts_inventory.group_teknoparts_admin,1,1,1,1
+access_tpart_qc_check_user,qc.check.user,model_tpart_qc_check,teknoparts_inventory.group_teknoparts_user,1,1,1,0
+access_tpart_qc_check_viewer,qc.check.viewer,model_tpart_qc_check,teknoparts_inventory.group_teknoparts_viewer,1,0,0,0
+
+access_tpart_qc_check_wizard,qc.check.wizard,model_tpart_qc_check_wizard,base.group_user,1,1,1,1

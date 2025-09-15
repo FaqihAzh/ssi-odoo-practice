@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Tambahkan field di res.users dulu (lihat 5.5) -->
+  <record id="rule_picking_wh" model="ir.rule">
+    <field name="name">Picking: user hanya lihat warehouse yg diizinkan</field>
+    <field name="model_id" ref="stock.model_stock_picking"/>
+    <field name="domain_force">[('picking_type_id.warehouse_id','in',user.allowed_warehouse_ids.ids)]</field>
+    <field name="groups" eval="[(4, ref('group_teknoparts_user'))]"/>
+  </record>
+</odoo>

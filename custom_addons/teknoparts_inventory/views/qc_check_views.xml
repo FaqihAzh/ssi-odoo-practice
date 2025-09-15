@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- TREE -->
+  <record id="view_qc_check_tree" model="ir.ui.view">
+    <field name="name">tpart.qc.check.tree</field>
+    <field name="model">tpart.qc.check</field>
+    <field name="arch" type="xml">
+      <tree string="QC Checks" decoration-muted="state=='cancel'">
+        <field name="name"/>
+        <field name="date"/>
+        <field name="receipt_id"/>
+        <field name="part_id"/>
+        <field name="qty_check"/>
+        <field name="qty_pass"/>
+        <field name="qty_fail"/>
+        <field name="state"/>
+      </tree>
+    </field>
+  </record>
+
+  <!-- FORM -->
+  <record id="view_qc_check_form" model="ir.ui.view">
+    <field name="name">tpart.qc.check.form</field>
+    <field name="model">tpart.qc.check</field>
+    <field name="arch" type="xml">
+      <form string="QC Check">
+        <header>
+          <button name="action_done" type="object" string="Validate"
+                  class="oe_highlight" invisible="state != 'draft'"/>
+          <button name="action_cancel" type="object" string="Cancel"
+                  invisible="state != 'draft'"/>
+          <field name="state" widget="statusbar"/>
+        </header>
+        <sheet>
+          <group>
+            <group>
+              <field name="name" readonly="1"/>
+              <field name="date"/>
+              <field name="receipt_id"/>
+            </group>
+            <group>
+              <field name="part_id"/>
+              <field name="qty_check"/>
+              <field name="qty_pass"/>
+              <field name="qty_fail"/>
+            </group>
+          </group>
+          <group>
+            <field name="note"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <!-- ACTION -->
+  <record id="action_qc_check" model="ir.actions.act_window">
+    <field name="name">QC Checks</field>
+    <field name="res_model">tpart.qc.check</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <!-- MENU -->
+  <menuitem id="menu_qc_check" name="QC Checks"
+            parent="menu_teknoparts_root"
+            action="action_qc_check"
+            sequence="20"/>
+</odoo>

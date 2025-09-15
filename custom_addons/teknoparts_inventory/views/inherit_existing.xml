@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- 1. Product.template form -->
+  <record id="view_product_template_form_inherit_tpart" model="ir.ui.view">
+    <field name="name">product.template.form.inherit.tpart</field>
+    <field name="model">product.template</field>
+    <field name="inherit_id" ref="product.product_template_form_view"/>
+    <field name="arch" type="xml">
+      <notebook position="inside">
+        <page string="Spare Part Info">
+          <group>
+            <field name="x_is_spare_part"/>
+            <field name="x_part_id" invisible="not x_is_spare_part"/>
+            <field name="x_qc_required"/>
+          </group>
+        </page>
+      </notebook>
+    </field>
+  </record>
+
+  <!-- 2. Stock.picking form -->
+  <record id="view_picking_form_inherit_qc" model="ir.ui.view">
+    <field name="name">stock.picking.form.inherit.qc</field>
+    <field name="model">stock.picking</field>
+    <field name="inherit_id" ref="stock.view_picking_form"/>
+    <field name="arch" type="xml">
+      <header position="inside">
+        <button name="%(action_qc_check_wizard)d" type="action"
+                string="Create QC" class="oe_highlight"
+                invisible="x_is_qc_required = False or state != 'done'"/>
+      </header>
+      <field name="origin" position="after">
+        <field name="x_is_qc_required" invisible="1"/>
+        <field name="x_qc_check_id" readonly="1"/>
+      </field>
+    </field>
+  </record>
+
+  <!-- 3. Purchase.order.line tree -->
+  <record id="view_purchase_order_line_tree_tpart" model="ir.ui.view">
+    <field name="name">purchase.order.line.tree.tpart</field>
+    <field name="model">purchase.order</field>
+    <field name="inherit_id" ref="purchase.purchase_order_view_tree"/>
+    <field name="arch" type="xml">
+      <field name="product_id" position="after">
+        <field name="x_part_id" optional="show"/>
+        <field name="x_brand" optional="show"/>
+        <field name="x_model_hp" optional="show"/>
+      </field>
+    </field>
+  </record>
+</odoo>

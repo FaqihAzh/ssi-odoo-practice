@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Viewer tidak boleh lihat part obsolete -->
+  <record id="rule_part_viewer_hide_obsolete" model="ir.rule">
+    <field name="name">Part: Viewer tidak lihat obsolete</field>
+    <field name="model_id" ref="model_tpart_part"/>
+    <field name="domain_force">[('state','!=','obsolete')]</field>
+    <field name="groups" eval="[(4, ref('group_teknoparts_viewer'))]"/>
+    <field name="perm_read" eval="1"/>
+    <field name="perm_write" eval="0"/>
+    <field name="perm_create" eval="0"/>
+    <field name="perm_unlink" eval="0"/>
+  </record>
+</odoo>
