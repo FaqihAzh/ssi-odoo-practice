@@ -20,4 +20,3 @@ access_tpart_qc_check_wizard_public,tpart.qc.check.wizard.public,model_tpart_qc_
 access_tpart_stock_opname_wizard,stock.opname.wizard,model_tpart_stock_opname_wizard,base.group_user,1,1,1,1
 access_tpart_stock_opname_line_wizard,stock.opname.line.wizard,model_tpart_stock_opname_line_wizard,base.group_user,1,1,1,1
 access_opname_import_wizard,opname.import.wizard,model_tpart_stock_opname_import_wizard,base.group_user,1,1,1,1
-access_opname_template_xlsx,opname.template.xlsx,model_teknoparts_inventory_opname_template_xlsx,base.group_user,1,1,1,1

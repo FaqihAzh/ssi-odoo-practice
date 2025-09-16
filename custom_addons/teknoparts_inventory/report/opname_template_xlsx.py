@@ -2,6 +2,7 @@ from odoo import models, fields, _
 
 class OpnameTemplateXlsx(models.AbstractModel):
     _name = 'report.teknoparts_inventory.opname_template_xlsx'
+    _description = 'Opname Template Excel'
     _inherit = 'report.report_xlsx.abstract'
 
     def generate_xlsx_report(self, workbook, data, docs):

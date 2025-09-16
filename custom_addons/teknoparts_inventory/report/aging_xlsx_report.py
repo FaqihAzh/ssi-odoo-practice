@@ -3,6 +3,7 @@ from odoo import models, fields, _
 
 class ReportAgingXlsx(models.AbstractModel):
     _name = 'report.teknoparts_inventory.aging_xlsx'
+    _description = 'Aging Report Excel'
     _inherit = 'report.report_xlsx.abstract'
 
     def generate_xlsx_report(self, workbook, data, parts):

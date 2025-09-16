@@ -1,7 +1,10 @@
-<record id="action_opname_template_xlsx" model="ir.actions.report">
-    <field name="name">Stock Opname Template (Excel)</field>
-    <field name="model">tpart.stock.opname.wizard</field>
-    <field name="report_type">xlsx</field>
-    <field name="report_name">teknoparts_inventory.opname_template_xlsx</field>
-    <field name="binding_model_id" ref="model_tpart_stock_opname_wizard"/>
-</record>
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_opname_template_xlsx" model="ir.actions.report">
+        <field name="name">Stock Opname Template (Excel)</field>
+        <field name="model">tpart.stock.opname.wizard</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">teknoparts_inventory.opname_template_xlsx</field>
+        <field name="binding_model_id" ref="model_tpart_stock_opname_wizard"/>
+    </record>
+</odoo>
