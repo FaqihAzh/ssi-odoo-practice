@@ -1,4 +1,4 @@
-from odoo import api, models, _
+from odoo import api, models, fields, _
 
 class KartuStockReport(models.AbstractModel):
     _name = 'report.teknoparts_inventory.kartu_stock_template'
@@ -11,4 +11,5 @@ class KartuStockReport(models.AbstractModel):
             'doc_ids': docs.ids,
             'doc_model': 'tpart.part',
             'docs': docs,
+            'context_today': fields.Date.context_today(self),  
         }

@@ -16,6 +16,7 @@
         'security/picking_rule.xml',
         'data/sequence.xml',
         'wizard/qc_check_wizard.xml',
+        'wizard/stock_opname_wizard.xml',
         'views/category_views.xml',
         'views/part_views.xml',
         'views/qc_check_views.xml',
@@ -23,6 +24,7 @@
         'views/report_kartu_stock.xml',
         'views/report_qc_failure.xml',
         'views/report_action.xml',
+        'views/stock_opname_menu.xml'
     ],
     'installable': True,
     'application': True,

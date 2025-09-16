@@ -1,2 +1,417 @@
-2025-09-16 04:48:23,809 10896 WARNING ssi_odoo_db odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='context_today()' in template 1426. Replace by @t-out 
-2025-09-16 04:48:24,103 10896 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 04:48:24] "POST /report/download HTTP/1.1" 200 - 11 0.017 0.361
+2025-09-16 05:40:45,016 14836 INFO ssi_odoo_db odoo.service.server: Initiating shutdown 
+2025-09-16 05:40:45,017 14836 INFO ssi_odoo_db odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2025-09-16 05:40:45,371 14836 INFO ssi_odoo_db odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 4 connections  
+2025-09-16 05:40:53,051 8752 INFO ? odoo: Odoo version 17.0 
+2025-09-16 05:40:53,060 8752 INFO ? odoo: Using configuration file at D:\Coding\seriously\learn-odoo\odoo\odoo.conf 
+2025-09-16 05:40:53,060 8752 INFO ? odoo: addons paths: ['D:\\Coding\\seriously\\learn-odoo\\odoo\\odoo\\addons', 'd:\\coding\\seriously\\learn-odoo\\odoo\\data\\addons\\17.0', 'd:\\coding\\seriously\\learn-odoo\\odoo\\addons', 'd:\\coding\\seriously\\learn-odoo\\odoo\\custom_addons', 'd:\\coding\\seriously\\learn-odoo\\odoo\\odoo\\addons'] 
+2025-09-16 05:40:53,060 8752 INFO ? odoo: database: odoo@localhost:5432 
+2025-09-16 05:40:53,541 8752 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe 
+2025-09-16 05:40:53,996 8752 WARNING ? odoo.service.server: 'watchdog' module not installed. Code autoreload feature is disabled 
+2025-09-16 05:40:54,001 8752 INFO ? odoo.service.server: HTTP service (werkzeug) running on LAPTOP-O0EP5QSP:8069 
+2025-09-16 05:40:54,081 8752 INFO ssi_odoo_db odoo.modules.loading: loading 1 modules... 
+2025-09-16 05:40:54,086 8752 INFO ssi_odoo_db odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2025-09-16 05:40:54,135 8752 INFO ssi_odoo_db odoo.modules.loading: updating modules list 
+2025-09-16 05:40:54,141 8752 INFO ssi_odoo_db odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2025-09-16 05:40:55,973 8752 INFO ssi_odoo_db odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['TeknoParts Inventory – Spare-part HP'] to user __system__ #1 via n/a 
+2025-09-16 05:40:55,973 8752 INFO ssi_odoo_db odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['TeknoParts Inventory – Spare-part HP'] to user __system__ #1 via n/a 
+2025-09-16 05:40:57,053 8752 INFO ssi_odoo_db odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2025-09-16 05:40:57,156 8752 INFO ssi_odoo_db odoo.modules.loading: loading 73 modules... 
+2025-09-16 05:40:58,566 8752 INFO ssi_odoo_db odoo.modules.loading: Loading module teknoparts_inventory (70/73) 
+2025-09-16 05:40:58,802 8752 WARNING ssi_odoo_db odoo.models: The model report.teknoparts_inventory.aging_xlsx has no _description 
+2025-09-16 05:40:58,802 8752 WARNING ssi_odoo_db odoo.models: The model report.teknoparts_inventory.opname_template_xlsx has no _description 
+2025-09-16 05:40:59,062 8752 INFO ssi_odoo_db odoo.modules.registry: module teknoparts_inventory: creating or updating database tables 
+2025-09-16 05:40:59,643 8752 INFO ssi_odoo_db odoo.modules.loading: loading teknoparts_inventory/security/security.xml 
+2025-09-16 05:40:59,866 8752 INFO ssi_odoo_db odoo.modules.loading: loading teknoparts_inventory/security/ir.model.access.csv 
+2025-09-16 05:40:59,972 8752 ERROR ssi_odoo_db odoo.sql_db: bad query: INSERT INTO "ir_model_access" ("active", "create_date", "create_uid", "group_id", "model_id", "name", "perm_create", "perm_read", "perm_unlink", "perm_write", "write_date", "write_uid") VALUES (true, '2025-09-16 05:40:54.068861', 1, 1, 655, 'stock.opname.wizard', true, true, true, true, '2025-09-16 05:40:54.068861', 1), (true, '2025-09-16 05:40:54.068861', 1, 1, 656, 'stock.opname.line.wizard', true, true, true, true, '2025-09-16 05:40:54.068861', 1), (true, '2025-09-16 05:40:54.068861', 1, 1, 657, 'opname.import.wizard', true, true, true, true, '2025-09-16 05:40:54.068861', 1), (true, '2025-09-16 05:40:54.068861', 1, 1, DEFAULT, 'opname.template.xlsx', true, true, true, true, '2025-09-16 05:40:54.068861', 1) RETURNING "id"
+ERROR: null value in column "model_id" of relation "ir_model_access" violates not-null constraint
+DETAIL:  Failing row contains (940, null, 1, 1, 1, opname.template.xlsx, t, t, t, t, t, 2025-09-16 05:40:54.068861, 2025-09-16 05:40:54.068861).
+ 
+2025-09-16 05:41:00,056 8752 ERROR ssi_odoo_db odoo.sql_db: bad query: INSERT INTO "ir_model_access" ("active", "create_date", "create_uid", "group_id", "name", "perm_create", "perm_read", "perm_unlink", "perm_write", "write_date", "write_uid") VALUES (true, '2025-09-16 05:40:54.068861', 1, 1, 'opname.template.xlsx', true, true, true, true, '2025-09-16 05:40:54.068861', 1) RETURNING "id"
+ERROR: null value in column "model_id" of relation "ir_model_access" violates not-null constraint
+DETAIL:  Failing row contains (944, null, 1, 1, 1, opname.template.xlsx, t, t, t, t, t, 2025-09-16 05:40:54.068861, 2025-09-16 05:40:54.068861).
+ 
+2025-09-16 05:41:00,491 8752 WARNING ssi_odoo_db odoo.modules.loading: Transient module states were reset 
+2025-09-16 05:41:00,491 8752 ERROR ssi_odoo_db odoo.modules.registry: Failed to load registry 
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 110, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 481, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 366, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 229, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 73, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 631, in convert_file
+    convert_csv_import(env, module, pathname, fp.read(), idref, mode, noupdate)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 677, in convert_csv_import
+    raise Exception(_('Module loading %s failed: file %s could not be processed:\n %s') % (module, fname, warning_msg))
+Exception: Module loading teknoparts_inventory failed: file teknoparts_inventory\security/ir.model.access.csv could not be processed:
+ No matching record found for external id 'model_teknoparts_inventory_opname_template_xlsx' in field 'Model'
+Missing required value for the field 'Model' (model_id)
+2025-09-16 05:41:00,501 8752 CRITICAL ssi_odoo_db odoo.service.server: Failed to initialize database `ssi_odoo_db`. 
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\service\server.py", line 1369, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\venv\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 110, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 481, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 366, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 229, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 73, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 631, in convert_file
+    convert_csv_import(env, module, pathname, fp.read(), idref, mode, noupdate)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 677, in convert_csv_import
+    raise Exception(_('Module loading %s failed: file %s could not be processed:\n %s') % (module, fname, warning_msg))
+Exception: Module loading teknoparts_inventory failed: file teknoparts_inventory\security/ir.model.access.csv could not be processed:
+ No matching record found for external id 'model_teknoparts_inventory_opname_template_xlsx' in field 'Model'
+Missing required value for the field 'Model' (model_id)
+2025-09-16 05:41:03,253 8752 INFO ? odoo.modules.loading: loading 1 modules... 
+2025-09-16 05:41:03,265 8752 INFO ? odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2025-09-16 05:41:03,284 8752 INFO ? odoo.modules.loading: loading 73 modules... 
+2025-09-16 05:41:03,382 8752 INFO ? odoo.modules.loading: Loading module teknoparts_inventory (70/73) 
+2025-09-16 05:41:03,797 8752 WARNING ? odoo.models: The model report.teknoparts_inventory.aging_xlsx has no _description 
+2025-09-16 05:41:03,797 8752 WARNING ? odoo.models: The model report.teknoparts_inventory.opname_template_xlsx has no _description 
+2025-09-16 05:41:04,072 8752 INFO ? odoo.modules.registry: module teknoparts_inventory: creating or updating database tables 
+2025-09-16 05:41:04,556 8752 INFO ? odoo.modules.loading: loading teknoparts_inventory/security/security.xml 
+2025-09-16 05:41:04,672 8752 INFO ? odoo.modules.loading: loading teknoparts_inventory/security/ir.model.access.csv 
+2025-09-16 05:41:04,713 8752 ERROR ? odoo.sql_db: bad query: INSERT INTO "ir_model_access" ("active", "create_date", "create_uid", "group_id", "model_id", "name", "perm_create", "perm_read", "perm_unlink", "perm_write", "write_date", "write_uid") VALUES (true, '2025-09-16 05:41:03.251782', 1, 1, 659, 'stock.opname.wizard', true, true, true, true, '2025-09-16 05:41:03.251782', 1), (true, '2025-09-16 05:41:03.251782', 1, 1, 660, 'stock.opname.line.wizard', true, true, true, true, '2025-09-16 05:41:03.251782', 1), (true, '2025-09-16 05:41:03.251782', 1, 1, 661, 'opname.import.wizard', true, true, true, true, '2025-09-16 05:41:03.251782', 1), (true, '2025-09-16 05:41:03.251782', 1, 1, DEFAULT, 'opname.template.xlsx', true, true, true, true, '2025-09-16 05:41:03.251782', 1) RETURNING "id"
+ERROR: null value in column "model_id" of relation "ir_model_access" violates not-null constraint
+DETAIL:  Failing row contains (948, null, 1, 1, 1, opname.template.xlsx, t, t, t, t, t, 2025-09-16 05:41:03.251782, 2025-09-16 05:41:03.251782).
+ 
+2025-09-16 05:41:04,771 8752 ERROR ? odoo.sql_db: bad query: INSERT INTO "ir_model_access" ("active", "create_date", "create_uid", "group_id", "name", "perm_create", "perm_read", "perm_unlink", "perm_write", "write_date", "write_uid") VALUES (true, '2025-09-16 05:41:03.251782', 1, 1, 'opname.template.xlsx', true, true, true, true, '2025-09-16 05:41:03.251782', 1) RETURNING "id"
+ERROR: null value in column "model_id" of relation "ir_model_access" violates not-null constraint
+DETAIL:  Failing row contains (952, null, 1, 1, 1, opname.template.xlsx, t, t, t, t, t, 2025-09-16 05:41:03.251782, 2025-09-16 05:41:03.251782).
+ 
+2025-09-16 05:41:04,951 8752 WARNING ? odoo.modules.loading: Transient module states were reset 
+2025-09-16 05:41:04,951 8752 ERROR ? odoo.modules.registry: Failed to load registry 
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 87, in __new__
+    return cls.registries[db_name]
+           ~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\venv\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\lru.py", line 34, in __getitem__
+    a = self.d[obj]
+        ~~~~~~^^^^^
+KeyError: 'ssi_odoo_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 110, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 481, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 366, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 229, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 73, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 631, in convert_file
+    convert_csv_import(env, module, pathname, fp.read(), idref, mode, noupdate)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 677, in convert_csv_import
+    raise Exception(_('Module loading %s failed: file %s could not be processed:\n %s') % (module, fname, warning_msg))
+Exception: Module loading teknoparts_inventory failed: file teknoparts_inventory\security/ir.model.access.csv could not be processed:
+ No matching record found for external id 'model_teknoparts_inventory_opname_template_xlsx' in field 'Model'
+Missing required value for the field 'Model' (model_id)
+2025-09-16 05:41:04,955 8752 ERROR ? odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 87, in __new__
+    return cls.registries[db_name]
+           ~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\venv\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\lru.py", line 34, in __getitem__
+    a = self.d[obj]
+        ~~~~~~^^^^^
+KeyError: 'ssi_odoo_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\http.py", line 2396, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\http.py", line 1949, in _serve_db
+    self.registry = Registry(self.db).check_signaling()
+                    ^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 89, in __new__
+    return cls.new(db_name)
+           ^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\venv\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 110, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 481, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 366, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 229, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 73, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 631, in convert_file
+    convert_csv_import(env, module, pathname, fp.read(), idref, mode, noupdate)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 677, in convert_csv_import
+    raise Exception(_('Module loading %s failed: file %s could not be processed:\n %s') % (module, fname, warning_msg))
+Exception: Module loading teknoparts_inventory failed: file teknoparts_inventory\security/ir.model.access.csv could not be processed:
+ No matching record found for external id 'model_teknoparts_inventory_opname_template_xlsx' in field 'Model'
+Missing required value for the field 'Model' (model_id)
+2025-09-16 05:41:04,955 8752 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2025 05:41:04] "GET /web HTTP/1.1" 500 - 412 0.486 1.230
+2025-09-16 05:41:05,032 8752 INFO ? odoo.modules.loading: loading 1 modules... 
+2025-09-16 05:41:05,048 8752 INFO ? odoo.modules.loading: 1 modules loaded in 0.02s, 0 queries (+0 extra) 
+2025-09-16 05:41:05,068 8752 INFO ? odoo.modules.loading: loading 73 modules... 
+2025-09-16 05:41:05,156 8752 INFO ? odoo.modules.loading: Loading module teknoparts_inventory (70/73) 
+2025-09-16 05:41:05,424 8752 WARNING ? odoo.models: The model report.teknoparts_inventory.aging_xlsx has no _description 
+2025-09-16 05:41:05,431 8752 WARNING ? odoo.models: The model report.teknoparts_inventory.opname_template_xlsx has no _description 
+2025-09-16 05:41:05,596 8752 INFO ? odoo.modules.registry: module teknoparts_inventory: creating or updating database tables 
+2025-09-16 05:41:05,901 8752 INFO ? odoo.modules.loading: loading teknoparts_inventory/security/security.xml 
+2025-09-16 05:41:06,146 8752 INFO ? odoo.modules.loading: loading teknoparts_inventory/security/ir.model.access.csv 
+2025-09-16 05:41:06,191 8752 ERROR ? odoo.sql_db: bad query: INSERT INTO "ir_model_access" ("active", "create_date", "create_uid", "group_id", "model_id", "name", "perm_create", "perm_read", "perm_unlink", "perm_write", "write_date", "write_uid") VALUES (true, '2025-09-16 05:41:05.031740', 1, 1, 663, 'stock.opname.wizard', true, true, true, true, '2025-09-16 05:41:05.031740', 1), (true, '2025-09-16 05:41:05.031740', 1, 1, 664, 'stock.opname.line.wizard', true, true, true, true, '2025-09-16 05:41:05.031740', 1), (true, '2025-09-16 05:41:05.031740', 1, 1, 665, 'opname.import.wizard', true, true, true, true, '2025-09-16 05:41:05.031740', 1), (true, '2025-09-16 05:41:05.031740', 1, 1, DEFAULT, 'opname.template.xlsx', true, true, true, true, '2025-09-16 05:41:05.031740', 1) RETURNING "id"
+ERROR: null value in column "model_id" of relation "ir_model_access" violates not-null constraint
+DETAIL:  Failing row contains (956, null, 1, 1, 1, opname.template.xlsx, t, t, t, t, t, 2025-09-16 05:41:05.03174, 2025-09-16 05:41:05.03174).
+ 
+2025-09-16 05:41:06,231 8752 ERROR ? odoo.sql_db: bad query: INSERT INTO "ir_model_access" ("active", "create_date", "create_uid", "group_id", "name", "perm_create", "perm_read", "perm_unlink", "perm_write", "write_date", "write_uid") VALUES (true, '2025-09-16 05:41:05.031740', 1, 1, 'opname.template.xlsx', true, true, true, true, '2025-09-16 05:41:05.031740', 1) RETURNING "id"
+ERROR: null value in column "model_id" of relation "ir_model_access" violates not-null constraint
+DETAIL:  Failing row contains (960, null, 1, 1, 1, opname.template.xlsx, t, t, t, t, t, 2025-09-16 05:41:05.03174, 2025-09-16 05:41:05.03174).
+ 
+2025-09-16 05:41:06,488 8752 WARNING ? odoo.modules.loading: Transient module states were reset 
+2025-09-16 05:41:06,488 8752 ERROR ? odoo.modules.registry: Failed to load registry 
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 87, in __new__
+    return cls.registries[db_name]
+           ~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\venv\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\lru.py", line 34, in __getitem__
+    a = self.d[obj]
+        ~~~~~~^^^^^
+KeyError: 'ssi_odoo_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 110, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 481, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 366, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 229, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 73, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 631, in convert_file
+    convert_csv_import(env, module, pathname, fp.read(), idref, mode, noupdate)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 677, in convert_csv_import
+    raise Exception(_('Module loading %s failed: file %s could not be processed:\n %s') % (module, fname, warning_msg))
+Exception: Module loading teknoparts_inventory failed: file teknoparts_inventory\security/ir.model.access.csv could not be processed:
+ No matching record found for external id 'model_teknoparts_inventory_opname_template_xlsx' in field 'Model'
+Missing required value for the field 'Model' (model_id)
+2025-09-16 05:41:06,491 8752 ERROR ? odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 87, in __new__
+    return cls.registries[db_name]
+           ~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\venv\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\lru.py", line 34, in __getitem__
+    a = self.d[obj]
+        ~~~~~~^^^^^
+KeyError: 'ssi_odoo_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\http.py", line 2396, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\http.py", line 1949, in _serve_db
+    self.registry = Registry(self.db).check_signaling()
+                    ^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 89, in __new__
+    return cls.new(db_name)
+           ^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\venv\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 110, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 481, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 366, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 229, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 73, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 631, in convert_file
+    convert_csv_import(env, module, pathname, fp.read(), idref, mode, noupdate)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 677, in convert_csv_import
+    raise Exception(_('Module loading %s failed: file %s could not be processed:\n %s') % (module, fname, warning_msg))
+Exception: Module loading teknoparts_inventory failed: file teknoparts_inventory\security/ir.model.access.csv could not be processed:
+ No matching record found for external id 'model_teknoparts_inventory_opname_template_xlsx' in field 'Model'
+Missing required value for the field 'Model' (model_id)
+2025-09-16 05:41:06,491 8752 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2025 05:41:06] "GET /favicon.ico HTTP/1.1" 500 - 412 0.398 1.080
+2025-09-16 05:41:06,996 8752 INFO ? odoo.modules.loading: loading 1 modules... 
+2025-09-16 05:41:07,011 8752 INFO ? odoo.modules.loading: 1 modules loaded in 0.02s, 0 queries (+0 extra) 
+2025-09-16 05:41:07,034 8752 INFO ? odoo.modules.loading: loading 73 modules... 
+2025-09-16 05:41:07,172 8752 INFO ? odoo.modules.loading: Loading module teknoparts_inventory (70/73) 
+2025-09-16 05:41:07,382 8752 WARNING ? odoo.models: The model report.teknoparts_inventory.aging_xlsx has no _description 
+2025-09-16 05:41:07,382 8752 WARNING ? odoo.models: The model report.teknoparts_inventory.opname_template_xlsx has no _description 
+2025-09-16 05:41:07,683 8752 INFO ? odoo.modules.registry: module teknoparts_inventory: creating or updating database tables 
+2025-09-16 05:41:08,196 8752 INFO ? odoo.modules.loading: loading teknoparts_inventory/security/security.xml 
+2025-09-16 05:41:08,378 8752 INFO ? odoo.modules.loading: loading teknoparts_inventory/security/ir.model.access.csv 
+2025-09-16 05:41:08,468 8752 ERROR ? odoo.sql_db: bad query: INSERT INTO "ir_model_access" ("active", "create_date", "create_uid", "group_id", "model_id", "name", "perm_create", "perm_read", "perm_unlink", "perm_write", "write_date", "write_uid") VALUES (true, '2025-09-16 05:41:06.996123', 1, 1, 667, 'stock.opname.wizard', true, true, true, true, '2025-09-16 05:41:06.996123', 1), (true, '2025-09-16 05:41:06.996123', 1, 1, 668, 'stock.opname.line.wizard', true, true, true, true, '2025-09-16 05:41:06.996123', 1), (true, '2025-09-16 05:41:06.996123', 1, 1, 669, 'opname.import.wizard', true, true, true, true, '2025-09-16 05:41:06.996123', 1), (true, '2025-09-16 05:41:06.996123', 1, 1, DEFAULT, 'opname.template.xlsx', true, true, true, true, '2025-09-16 05:41:06.996123', 1) RETURNING "id"
+ERROR: null value in column "model_id" of relation "ir_model_access" violates not-null constraint
+DETAIL:  Failing row contains (964, null, 1, 1, 1, opname.template.xlsx, t, t, t, t, t, 2025-09-16 05:41:06.996123, 2025-09-16 05:41:06.996123).
+ 
+2025-09-16 05:41:08,553 8752 ERROR ? odoo.sql_db: bad query: INSERT INTO "ir_model_access" ("active", "create_date", "create_uid", "group_id", "name", "perm_create", "perm_read", "perm_unlink", "perm_write", "write_date", "write_uid") VALUES (true, '2025-09-16 05:41:06.996123', 1, 1, 'opname.template.xlsx', true, true, true, true, '2025-09-16 05:41:06.996123', 1) RETURNING "id"
+ERROR: null value in column "model_id" of relation "ir_model_access" violates not-null constraint
+DETAIL:  Failing row contains (968, null, 1, 1, 1, opname.template.xlsx, t, t, t, t, t, 2025-09-16 05:41:06.996123, 2025-09-16 05:41:06.996123).
+ 
+2025-09-16 05:41:09,106 8752 WARNING ? odoo.modules.loading: Transient module states were reset 
+2025-09-16 05:41:09,106 8752 ERROR ? odoo.modules.registry: Failed to load registry 
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 87, in __new__
+    return cls.registries[db_name]
+           ~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\venv\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\lru.py", line 34, in __getitem__
+    a = self.d[obj]
+        ~~~~~~^^^^^
+KeyError: 'ssi_odoo_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 110, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 481, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 366, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 229, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 73, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 631, in convert_file
+    convert_csv_import(env, module, pathname, fp.read(), idref, mode, noupdate)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 677, in convert_csv_import
+    raise Exception(_('Module loading %s failed: file %s could not be processed:\n %s') % (module, fname, warning_msg))
+Exception: Module loading teknoparts_inventory failed: file teknoparts_inventory\security/ir.model.access.csv could not be processed:
+ No matching record found for external id 'model_teknoparts_inventory_opname_template_xlsx' in field 'Model'
+Missing required value for the field 'Model' (model_id)
+2025-09-16 05:41:09,113 8752 ERROR ? odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 87, in __new__
+    return cls.registries[db_name]
+           ~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\venv\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\lru.py", line 34, in __getitem__
+    a = self.d[obj]
+        ~~~~~~^^^^^
+KeyError: 'ssi_odoo_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\http.py", line 2396, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\http.py", line 1949, in _serve_db
+    self.registry = Registry(self.db).check_signaling()
+                    ^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 89, in __new__
+    return cls.new(db_name)
+           ^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\venv\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 110, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 481, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 366, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 229, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 73, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 631, in convert_file
+    convert_csv_import(env, module, pathname, fp.read(), idref, mode, noupdate)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 677, in convert_csv_import
+    raise Exception(_('Module loading %s failed: file %s could not be processed:\n %s') % (module, fname, warning_msg))
+Exception: Module loading teknoparts_inventory failed: file teknoparts_inventory\security/ir.model.access.csv could not be processed:
+ No matching record found for external id 'model_teknoparts_inventory_opname_template_xlsx' in field 'Model'
+Missing required value for the field 'Model' (model_id)
+2025-09-16 05:41:09,121 8752 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2025 05:41:09] "GET /web/service-worker.js HTTP/1.1" 500 - 412 0.504 1.641
+2025-09-16 05:41:31,153 8752 INFO ssi_odoo_db odoo.service.server: Initiating shutdown 
+2025-09-16 05:41:31,153 8752 INFO ssi_odoo_db odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2025-09-16 05:41:31,511 8752 INFO ssi_odoo_db odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 4 connections  
