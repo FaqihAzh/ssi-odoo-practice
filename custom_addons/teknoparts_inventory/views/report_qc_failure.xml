@@ -1,18 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-  <template id="qc_failure_template">
-    <t t-call="web.html_container">
-      <t t-foreach="docs" t-as="o">
-        <div class="page">
-          <h2>QC Failure Report</h2>
-          <table class="table table-sm">
-            <tr><td>Reference</td><td><span t-field="o.name"/></td></tr>
-            <tr><td>Supplier</td><td><span t-field="o.receipt_id.partner_id"/></td></tr>
-            <tr><td>Part</td><td><span t-field="o.part_id.name"/></td></tr>
-            <tr><td>Qty Fail</td><td><span t-field="o.qty_fail"/></td></tr>
-          </table>
-        </div>
-      </t>
-    </t>
-  </template>
+    <template id="qc_failure_template">
+        <t t-call="web.external_layout">
+            <div class="page">
+                <h2 class="text-center">Laporan Kegagalan QC</h2>
+                <table class="table table-hover table-sm mt-4">
+                    <thead class="table-danger">
+                        <tr>
+                            <th>No</th>
+                            <th>No. QC</th>
+                            <th>Supplier</th>
+                            <th>Part</th>
+                            <th class="text-center">Qty Check</th>
+                            <th class="text-center">Fail</th>
+                            <th>% Fail</th>
+                            <th>Keterangan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="docs" t-as="o" t-status="index">
+                            <tr>
+                                <td><span t-esc="(index or 0) + 1"/></td>
+                                <td><span t-field="o.name"/></td>
+                                <td><span t-field="o.receipt_id.partner_id"/></td>
+                                <td><span t-field="o.part_id.name"/></td>
+                                <td class="text-center"><span t-field="o.qty_check"/></td>
+                                <td class="text-center"><span t-field="o.qty_fail"/></td>
+                                <td><span t-esc="(o.qty_fail / (o.qty_check or 1) * 100)"
+                                          t-options="{'widget': 'float', 'precision': 1}"/> %</td>
+                                <td><span t-field="o.note"/></td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </t>
+    </template>
 </odoo>

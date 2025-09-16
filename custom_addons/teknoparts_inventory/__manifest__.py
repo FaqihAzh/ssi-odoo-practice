@@ -8,7 +8,7 @@
     """,
     'author': 'YourName',
     'website': 'https://www.faqihazh.my.id',
-    'depends': ['base', 'product', 'stock', 'purchase', 'sale', 'report_xlsx'],
+    'depends': ['base', 'product', 'stock', 'purchase', 'sale'],
     'data': [
         'security/security.xml',
         'security/ir.model.access.csv',

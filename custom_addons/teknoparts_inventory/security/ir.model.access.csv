@@ -16,5 +16,3 @@ access_tpart_qc_check_viewer,tpart.qc.check.viewer,model_tpart_qc_check,teknopar
 access_tpart_qc_check_wizard_admin,tpart.qc.check.wizard.admin,model_tpart_qc_check_wizard,teknoparts_inventory.group_teknoparts_admin,1,1,1,1
 access_tpart_qc_check_wizard_user,tpart.qc.check.wizard.user,model_tpart_qc_check_wizard,teknoparts_inventory.group_teknoparts_user,1,1,1,1
 access_tpart_qc_check_wizard_public,tpart.qc.check.wizard.public,model_tpart_qc_check_wizard,base.group_user,1,1,1,1
-
-access_report_aging_xlsx,report.aging.xlsx,model_report_teknoparts_inventory_aging_xlsx,base.group_user,1,1,1,1

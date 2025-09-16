@@ -138,3 +138,22 @@ class TpartPart(models.Model):
             'view_mode': 'form',
             'target': 'current',
         }
+
+    # -------- STOCK MOVE HISTORY ----------
+    stock_move_line_ids = fields.One2many(
+        'stock.move.line', 'product_id',
+        string='Stock Moves',
+        compute='_compute_stock_moves',
+        store=False
+    )
+
+    @api.depends('product_id')
+    def _compute_stock_moves(self):
+        for rec in self:
+            if rec.product_id and rec.product_id.product_variant_ids:
+                product = rec.product_id.product_variant_ids[0]
+                rec.stock_move_line_ids = self.env['stock.move.line'].search([
+                    ('product_id', '=', product.id)
+                ])
+            else:
+                rec.stock_move_line_ids = False
