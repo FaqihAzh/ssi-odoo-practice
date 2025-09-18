@@ -1,107 +1,462 @@
-2025-09-16 06:10:04,162 4840 INFO ssi_odoo_db odoo.service.server: Initiating shutdown 
-2025-09-16 06:10:04,162 4840 INFO ssi_odoo_db odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
-2025-09-16 06:10:04,602 4840 INFO ssi_odoo_db odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 3 connections  
-2025-09-16 06:10:07,559 13540 INFO ? odoo: Odoo version 17.0 
-2025-09-16 06:10:07,559 13540 INFO ? odoo: Using configuration file at D:\Coding\seriously\learn-odoo\odoo\odoo.conf 
-2025-09-16 06:10:07,559 13540 INFO ? odoo: addons paths: ['D:\\Coding\\seriously\\learn-odoo\\odoo\\odoo\\addons', 'd:\\coding\\seriously\\learn-odoo\\odoo\\data\\addons\\17.0', 'd:\\coding\\seriously\\learn-odoo\\odoo\\addons', 'd:\\coding\\seriously\\learn-odoo\\odoo\\custom_addons', 'd:\\coding\\seriously\\learn-odoo\\odoo\\odoo\\addons'] 
-2025-09-16 06:10:07,559 13540 INFO ? odoo: database: odoo@localhost:5432 
-2025-09-16 06:10:07,732 13540 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe 
-2025-09-16 06:10:07,952 13540 WARNING ? odoo.service.server: 'watchdog' module not installed. Code autoreload feature is disabled 
-2025-09-16 06:10:07,968 13540 INFO ? odoo.service.server: HTTP service (werkzeug) running on LAPTOP-O0EP5QSP:8069 
-2025-09-16 06:10:08,015 13540 INFO ssi_odoo_db odoo.modules.loading: loading 1 modules... 
-2025-09-16 06:10:08,015 13540 INFO ssi_odoo_db odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
-2025-09-16 06:10:08,031 13540 INFO ssi_odoo_db odoo.modules.loading: updating modules list 
-2025-09-16 06:10:08,031 13540 INFO ssi_odoo_db odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
-2025-09-16 06:10:09,224 13540 INFO ssi_odoo_db odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['TeknoParts Inventory – Spare-part HP'] to user __system__ #1 via n/a 
-2025-09-16 06:10:09,224 13540 INFO ssi_odoo_db odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['TeknoParts Inventory – Spare-part HP'] to user __system__ #1 via n/a 
-2025-09-16 06:10:09,849 13540 INFO ssi_odoo_db odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
-2025-09-16 06:10:09,912 13540 INFO ssi_odoo_db odoo.modules.loading: loading 73 modules... 
-2025-09-16 06:10:10,884 13540 INFO ssi_odoo_db odoo.modules.loading: Loading module teknoparts_inventory (70/73) 
-2025-09-16 06:10:11,088 13540 INFO ssi_odoo_db odoo.modules.registry: module teknoparts_inventory: creating or updating database tables 
-2025-09-16 06:10:11,245 13540 INFO ssi_odoo_db odoo.modules.loading: loading teknoparts_inventory/security/security.xml 
-2025-09-16 06:10:11,324 13540 INFO ssi_odoo_db odoo.modules.loading: loading teknoparts_inventory/security/ir.model.access.csv 
-2025-09-16 06:10:11,355 13540 INFO ssi_odoo_db odoo.modules.loading: loading teknoparts_inventory/security/part_rule.xml 
-2025-09-16 06:10:11,370 13540 INFO ssi_odoo_db odoo.modules.loading: loading teknoparts_inventory/security/picking_rule.xml 
-2025-09-16 06:10:11,386 13540 INFO ssi_odoo_db odoo.modules.loading: loading teknoparts_inventory/data/sequence.xml 
-2025-09-16 06:10:11,386 13540 INFO ssi_odoo_db odoo.modules.loading: loading teknoparts_inventory/wizard/qc_check_wizard.xml 
-2025-09-16 06:10:11,402 13540 INFO ssi_odoo_db odoo.modules.loading: loading teknoparts_inventory/wizard/stock_opname_wizard.xml 
-2025-09-16 06:10:11,418 13540 INFO ssi_odoo_db odoo.modules.loading: loading teknoparts_inventory/views/category_views.xml 
-2025-09-16 06:10:11,433 13540 INFO ssi_odoo_db odoo.modules.loading: loading teknoparts_inventory/views/part_views.xml 
-2025-09-16 06:10:11,465 13540 INFO ssi_odoo_db odoo.modules.loading: loading teknoparts_inventory/views/qc_check_views.xml 
-2025-09-16 06:10:11,480 13540 INFO ssi_odoo_db odoo.modules.loading: loading teknoparts_inventory/views/inherit_existing.xml 
-2025-09-16 06:10:11,543 13540 WARNING ssi_odoo_db odoo.addons.base.models.ir_ui_view: Using active_id, active_ids and active_model in expressions is deprecated, found active_id 
-2025-09-16 06:10:11,574 13540 INFO ssi_odoo_db odoo.modules.loading: loading teknoparts_inventory/views/report_kartu_stock.xml 
-2025-09-16 06:10:11,590 13540 INFO ssi_odoo_db odoo.modules.loading: loading teknoparts_inventory/views/report_qc_failure.xml 
-2025-09-16 06:10:11,590 13540 INFO ssi_odoo_db odoo.modules.loading: loading teknoparts_inventory/views/report_action.xml 
-2025-09-16 06:10:11,605 13540 INFO ssi_odoo_db odoo.modules.loading: loading teknoparts_inventory/views/stock_opname_menu.xml 
-2025-09-16 06:10:11,621 13540 INFO ssi_odoo_db odoo.modules.loading: Module teknoparts_inventory loaded in 0.74s, 574 queries (+574 other) 
-2025-09-16 06:10:11,653 13540 INFO ssi_odoo_db odoo.modules.loading: 73 modules loaded in 1.74s, 574 queries (+574 extra) 
-2025-09-16 06:10:12,060 13540 INFO ssi_odoo_db odoo.modules.registry: verifying fields for every extended model 
-2025-09-16 06:10:12,656 13540 INFO ssi_odoo_db odoo.modules.loading: Modules loaded. 
-2025-09-16 06:10:12,656 13540 INFO ssi_odoo_db odoo.modules.registry: Registry loaded in 4.705s 
-2025-09-16 06:10:21,253 13540 INFO ssi_odoo_db odoo.addons.base.models.ir_http: Generating routing map for key None 
-2025-09-16 06:10:21,913 13540 WARNING ssi_odoo_db odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc="title or 'Odoo'" in template 180. Replace by @t-out 
-2025-09-16 06:10:21,914 13540 WARNING ssi_odoo_db odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='request.csrf_token(None)' in template 180. Replace by @t-out 
-2025-09-16 06:10:21,914 13540 WARNING ssi_odoo_db odoo.addons.base.models.ir_qweb: Found deprecated directive @t-esc='debug' in template 180. Replace by @t-out 
-2025-09-16 06:10:21,915 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:10:21] "GET /web HTTP/1.1" 200 - 90 0.068 0.595
-2025-09-16 06:10:22,031 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:10:22] "GET /web/webclient/load_menus/4fc113ecb8acb0faf1f146fe32cc4075e52dbf41d4ed9c9921d2f31d03843724 HTTP/1.1" 200 - 2 0.000 0.083
-2025-09-16 06:10:46,066 13540 INFO ssi_odoo_db odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/4945280/web.assets_web.min.js (id:589) 
-2025-09-16 06:10:46,067 13540 INFO ssi_odoo_db odoo.addons.base.models.assetsbundle: Deleting attachments [587] (matching /web/assets/_______/web.assets_web.min.js) because it was replaced with /web/assets/4945280/web.assets_web.min.js 
-2025-09-16 06:10:46,782 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:10:46] "GET /web/assets/4945280/web.assets_web.min.js HTTP/1.1" 200 - 28 0.074 24.770
-2025-09-16 06:10:47,449 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:10:47] "POST /web/action/load HTTP/1.1" 200 - 8 0.019 0.130
-2025-09-16 06:10:47,456 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:10:47] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 5 0.009 0.133
-2025-09-16 06:10:47,463 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:10:47] "GET /bus/websocket_worker_bundle?v=17.0-1 HTTP/1.1" 304 - 4 0.010 0.105
-2025-09-16 06:10:47,510 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:10:47] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 22 0.040 0.125
-2025-09-16 06:10:47,566 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:10:47] "POST /mail/init_messaging HTTP/1.1" 200 - 68 0.092 0.174
-2025-09-16 06:10:47,614 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:10:47] "POST /web/dataset/call_kw/tpart.part/get_views HTTP/1.1" 200 - 45 0.015 0.033
-2025-09-16 06:10:47,799 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:10:47] "GET /websocket?version=17.0-1 HTTP/1.1" 101 - 1 0.002 0.013
-2025-09-16 06:10:47,823 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:10:47] "POST /mail/load_message_failures HTTP/1.1" 200 - 9 0.028 0.012
-2025-09-16 06:10:47,833 13540 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
-2025-09-16 06:10:47,868 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:10:47] "POST /web/dataset/call_kw/tpart.part/web_search_read HTTP/1.1" 200 - 6 0.003 0.040
-2025-09-16 06:10:47,877 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:10:47] "POST /web/dataset/call_kw/res.users/has_group HTTP/1.1" 200 - 2 0.002 0.002
-2025-09-16 06:10:47,947 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:10:47] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 14 0.000 0.000
-2025-09-16 06:10:49,500 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:10:49] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.000 0.000
-2025-09-16 06:10:50,848 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:10:50] "POST /web/action/load HTTP/1.1" 200 - 8 0.014 0.000
-2025-09-16 06:10:51,125 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:10:51] "POST /web/dataset/call_kw/tpart.stock.opname.wizard/get_views HTTP/1.1" 200 - 9 0.003 0.029
-2025-09-16 06:10:51,164 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:10:51] "POST /web/dataset/call_kw/tpart.stock.opname.wizard/onchange HTTP/1.1" 200 - 2 0.000 0.000
-2025-09-16 06:10:56,597 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:10:56] "POST /web/dataset/call_kw/stock.location/name_search HTTP/1.1" 200 - 7 0.003 0.008
-2025-09-16 06:11:01,030 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:11:01] "POST /web/dataset/call_kw/tpart.stock.opname.line.wizard/onchange HTTP/1.1" 200 - 2 0.000 0.003
-2025-09-16 06:11:09,758 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:11:09] "POST /web/dataset/call_kw/tpart.stock.opname.line.wizard/onchange HTTP/1.1" 200 - 1 0.000 0.002
-2025-09-16 06:11:12,696 13540 INFO ssi_odoo_db odoo.addons.base.models.ir_cron: Starting job `Base: Auto-vacuum internal data`. 
-2025-09-16 06:11:12,759 13540 INFO ssi_odoo_db odoo.addons.base.models.ir_attachment: filestore gc 2 checked, 1 removed 
-2025-09-16 06:11:12,815 13540 INFO ssi_odoo_db odoo.addons.base.models.res_users: GC'd 0 user log entries 
-2025-09-16 06:11:12,845 13540 INFO ssi_odoo_db odoo.addons.auth_totp.models.auth_totp: GC'd 0 totp devices entries 
-2025-09-16 06:11:12,939 13540 INFO ssi_odoo_db odoo.addons.sms.models.sms_sms: GC'd 0 sms marked for deletion 
-2025-09-16 06:11:13,142 13540 INFO ssi_odoo_db odoo.addons.base.models.ir_cron: Job done: `Base: Auto-vacuum internal data` (0.445s). 
-2025-09-16 06:11:15,029 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:11:15] "POST /web/dataset/call_kw/tpart.stock.opname.wizard/web_save HTTP/1.1" 200 - 9 0.003 0.014
-2025-09-16 06:11:15,306 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:11:15] "POST /web/dataset/call_button HTTP/1.1" 200 - 31 0.031 0.013
-2025-09-16 06:11:15,380 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:11:15] "POST /web/dataset/call_kw/tpart.stock.opname.wizard/get_views HTTP/1.1" 200 - 5 0.000 0.016
-2025-09-16 06:11:15,624 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:11:15] "POST /web/dataset/call_kw/tpart.stock.opname.wizard/web_read HTTP/1.1" 200 - 12 0.001 0.011
-2025-09-16 06:11:17,779 13540 INFO ssi_odoo_db odoo.models.unlink: User #2 deleted tpart.stock.opname.line.wizard records with IDs: [1] 
-2025-09-16 06:11:17,846 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:11:17] "POST /web/dataset/call_button HTTP/1.1" 200 - 38 0.061 0.029
-2025-09-16 06:11:18,180 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:11:18] "POST /web/dataset/call_kw/tpart.stock.opname.wizard/web_read HTTP/1.1" 200 - 12 0.015 0.006
-2025-09-16 06:11:20,590 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:11:20] "POST /web/dataset/call_kw/tpart.stock.opname.line.wizard/onchange HTTP/1.1" 200 - 1 0.000 0.007
-2025-09-16 06:11:22,181 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:11:22] "POST /web/dataset/call_kw/tpart.stock.opname.wizard/web_save HTTP/1.1" 200 - 17 0.031 0.003
-2025-09-16 06:11:22,421 13540 INFO ssi_odoo_db odoo.models.unlink: User #2 deleted tpart.stock.opname.line.wizard records with IDs: [2, 3] 
-2025-09-16 06:11:22,443 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:11:22] "POST /web/dataset/call_button HTTP/1.1" 200 - 38 0.007 0.041
-2025-09-16 06:11:22,532 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:11:22] "POST /web/dataset/call_kw/tpart.stock.opname.wizard/web_read HTTP/1.1" 200 - 12 0.011 0.009
-2025-09-16 06:11:27,737 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:11:27] "POST /web/dataset/call_kw/tpart.stock.opname.wizard/onchange HTTP/1.1" 200 - 1 0.000 0.001
-2025-09-16 06:11:42,194 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:11:42] "POST /web/dataset/call_kw/stock.location/name_search HTTP/1.1" 200 - 7 0.012 0.000
-2025-09-16 06:11:45,095 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:11:45] "POST /web/dataset/call_kw/tpart.stock.opname.wizard/web_save HTTP/1.1" 200 - 9 0.003 0.033
-2025-09-16 06:11:45,461 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:11:45] "POST /web/dataset/call_button HTTP/1.1" 200 - 31 0.027 0.022
-2025-09-16 06:11:45,684 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:11:45] "POST /web/dataset/call_kw/tpart.stock.opname.wizard/web_read HTTP/1.1" 200 - 12 0.013 0.007
-2025-09-16 06:11:48,097 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:11:48] "POST /web/dataset/call_button HTTP/1.1" 200 - 12 0.005 0.007
-2025-09-16 06:11:48,477 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:11:48] "POST /report/download HTTP/1.1" 200 - 15 0.027 0.035
-2025-09-16 06:11:48,678 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:11:48] "POST /web/dataset/call_kw/tpart.stock.opname.wizard/web_read HTTP/1.1" 200 - 12 0.008 0.005
-2025-09-16 06:12:00,204 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:12:00] "POST /web/dataset/call_kw/tpart.stock.opname.wizard/onchange HTTP/1.1" 200 - 1 0.000 0.001
-2025-09-16 06:12:14,626 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:12:14] "POST /web/dataset/call_kw/tpart.part/web_save HTTP/1.1" 200 - 19 0.016 0.016
-2025-09-16 06:12:15,502 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:12:15] "POST /web/dataset/call_kw/tpart.stock.opname.wizard/onchange HTTP/1.1" 200 - 1 0.000 0.002
-2025-09-16 06:12:20,809 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:12:20] "POST /web/dataset/call_kw/stock.location/name_search HTTP/1.1" 200 - 7 0.014 0.000
-2025-09-16 06:12:21,194 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:12:21] "POST /web/dataset/call_kw/stock.location/name_search HTTP/1.1" 200 - 7 0.000 0.002
-2025-09-16 06:12:24,026 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:12:24] "POST /web/dataset/call_kw/tpart.stock.opname.wizard/web_save HTTP/1.1" 200 - 9 0.010 0.004
-2025-09-16 06:12:24,310 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:12:24] "POST /web/dataset/call_button HTTP/1.1" 200 - 31 0.017 0.020
-2025-09-16 06:12:24,372 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:12:24] "POST /web/dataset/call_kw/tpart.stock.opname.wizard/web_read HTTP/1.1" 200 - 12 0.006 0.007
-2025-09-16 06:12:26,902 13540 INFO ssi_odoo_db werkzeug: 127.0.0.1 - - [16/Sep/2025 06:12:26] "POST /web/dataset/call_kw/tpart.stock.opname.line.wizard/onchange HTTP/1.1" 200 - 1 0.000 0.004
-2025-09-16 06:27:55,987 13540 INFO ssi_odoo_db odoo.service.server: Initiating shutdown 
-2025-09-16 06:27:55,988 13540 INFO ssi_odoo_db odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
-2025-09-16 06:27:56,391 13540 INFO ssi_odoo_db odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 3 connections  
+2025-09-18 04:28:01,188 14296 INFO ? odoo: Odoo version 17.0 
+2025-09-18 04:28:01,188 14296 INFO ? odoo: Using configuration file at D:\Coding\seriously\learn-odoo\odoo\odoo.conf 
+2025-09-18 04:28:01,188 14296 INFO ? odoo: addons paths: ['D:\\Coding\\seriously\\learn-odoo\\odoo\\odoo\\addons', 'd:\\coding\\seriously\\learn-odoo\\odoo\\data\\addons\\17.0', 'd:\\coding\\seriously\\learn-odoo\\odoo\\addons', 'd:\\coding\\seriously\\learn-odoo\\odoo\\custom_addons', 'd:\\coding\\seriously\\learn-odoo\\odoo\\custom_addons\\custom_accounting', 'd:\\coding\\seriously\\learn-odoo\\odoo\\odoo\\addons'] 
+2025-09-18 04:28:01,188 14296 INFO ? odoo: database: odoo@localhost:5432 
+2025-09-18 04:28:01,378 14296 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe 
+2025-09-18 04:28:01,650 14296 WARNING ? odoo.service.server: 'watchdog' module not installed. Code autoreload feature is disabled 
+2025-09-18 04:28:01,654 14296 INFO ? odoo.service.server: HTTP service (werkzeug) running on LAPTOP-O0EP5QSP:8069 
+2025-09-18 04:28:01,704 14296 INFO ssi_odoo_db odoo.modules.loading: loading 1 modules... 
+2025-09-18 04:28:01,704 14296 INFO ssi_odoo_db odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2025-09-18 04:28:01,720 14296 INFO ssi_odoo_db odoo.modules.loading: updating modules list 
+2025-09-18 04:28:01,720 14296 INFO ssi_odoo_db odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2025-09-18 04:28:02,955 14296 INFO ssi_odoo_db odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['TeknoParts Inventory – Spare-part HP'] to user __system__ #1 via n/a 
+2025-09-18 04:28:02,955 14296 INFO ssi_odoo_db odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['TeknoParts Inventory – Spare-part HP'] to user __system__ #1 via n/a 
+2025-09-18 04:28:03,582 14296 INFO ssi_odoo_db odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2025-09-18 04:28:03,646 14296 INFO ssi_odoo_db odoo.modules.loading: loading 81 modules... 
+2025-09-18 04:28:04,899 14296 INFO ssi_odoo_db odoo.modules.loading: Loading module teknoparts_inventory (78/81) 
+2025-09-18 04:28:05,267 14296 INFO ssi_odoo_db odoo.modules.registry: module teknoparts_inventory: creating or updating database tables 
+2025-09-18 04:28:05,594 14296 INFO ssi_odoo_db odoo.modules.loading: loading teknoparts_inventory/security/security.xml 
+2025-09-18 04:28:05,697 14296 INFO ssi_odoo_db odoo.modules.loading: loading teknoparts_inventory/security/ir.model.access.csv 
+2025-09-18 04:28:05,741 14296 INFO ssi_odoo_db odoo.modules.loading: loading teknoparts_inventory/security/part_rule.xml 
+2025-09-18 04:28:05,760 14296 INFO ssi_odoo_db odoo.modules.loading: loading teknoparts_inventory/security/picking_rule.xml 
+2025-09-18 04:28:05,771 14296 INFO ssi_odoo_db odoo.modules.loading: loading teknoparts_inventory/data/sequence.xml 
+2025-09-18 04:28:05,776 14296 INFO ssi_odoo_db odoo.modules.loading: loading teknoparts_inventory/wizard/qc_check_wizard.xml 
+2025-09-18 04:28:05,785 14296 INFO ssi_odoo_db odoo.modules.loading: loading teknoparts_inventory/wizard/stock_opname_wizard.xml 
+2025-09-18 04:28:05,799 14296 INFO ssi_odoo_db odoo.modules.loading: loading teknoparts_inventory/wizard/advanced_print_wizard.xml 
+2025-09-18 04:28:05,808 14296 WARNING ssi_odoo_db odoo.modules.loading: Transient module states were reset 
+2025-09-18 04:28:05,808 14296 ERROR ssi_odoo_db odoo.modules.registry: Failed to load registry 
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 110, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 481, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 366, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 229, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 73, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 635, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 680, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src\lxml\etree.pyx", line 3541, in lxml.etree.parse
+  File "src\lxml\parser.pxi", line 1900, in lxml.etree._parseDocument
+  File "src\lxml\parser.pxi", line 1920, in lxml.etree._parseFilelikeDocument
+  File "src\lxml\parser.pxi", line 1814, in lxml.etree._parseDocFromFilelike
+  File "src\lxml\parser.pxi", line 1204, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src\lxml\parser.pxi", line 618, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src\lxml\parser.pxi", line 728, in lxml.etree._handleParseResult
+  File "src\lxml\parser.pxi", line 657, in lxml.etree._raiseParseError
+  File "d:\coding\seriously\learn-odoo\odoo\custom_addons\teknoparts_inventory\wizard\advanced_print_wizard.xml", line 69
+lxml.etree.XMLSyntaxError: xmlParseEntityRef: no name, line 69, column 56
+2025-09-18 04:28:05,810 14296 CRITICAL ssi_odoo_db odoo.service.server: Failed to initialize database `ssi_odoo_db`. 
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\service\server.py", line 1369, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\venv\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 110, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 481, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 366, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 229, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 73, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 635, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 680, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src\lxml\etree.pyx", line 3541, in lxml.etree.parse
+  File "src\lxml\parser.pxi", line 1900, in lxml.etree._parseDocument
+  File "src\lxml\parser.pxi", line 1920, in lxml.etree._parseFilelikeDocument
+  File "src\lxml\parser.pxi", line 1814, in lxml.etree._parseDocFromFilelike
+  File "src\lxml\parser.pxi", line 1204, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src\lxml\parser.pxi", line 618, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src\lxml\parser.pxi", line 728, in lxml.etree._handleParseResult
+  File "src\lxml\parser.pxi", line 657, in lxml.etree._raiseParseError
+  File "d:\coding\seriously\learn-odoo\odoo\custom_addons\teknoparts_inventory\wizard\advanced_print_wizard.xml", line 69
+lxml.etree.XMLSyntaxError: xmlParseEntityRef: no name, line 69, column 56
+2025-09-18 04:28:11,404 14296 INFO ? odoo.modules.loading: loading 1 modules... 
+2025-09-18 04:28:11,405 14296 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2025-09-18 04:28:11,422 14296 INFO ? odoo.modules.loading: loading 81 modules... 
+2025-09-18 04:28:11,488 14296 INFO ? odoo.modules.loading: Loading module teknoparts_inventory (78/81) 
+2025-09-18 04:28:11,919 14296 INFO ? odoo.modules.registry: module teknoparts_inventory: creating or updating database tables 
+2025-09-18 04:28:12,177 14296 INFO ? odoo.modules.loading: loading teknoparts_inventory/security/security.xml 
+2025-09-18 04:28:12,254 14296 INFO ? odoo.modules.loading: loading teknoparts_inventory/security/ir.model.access.csv 
+2025-09-18 04:28:12,280 14296 INFO ? odoo.modules.loading: loading teknoparts_inventory/security/part_rule.xml 
+2025-09-18 04:28:12,291 14296 INFO ? odoo.modules.loading: loading teknoparts_inventory/security/picking_rule.xml 
+2025-09-18 04:28:12,298 14296 INFO ? odoo.modules.loading: loading teknoparts_inventory/data/sequence.xml 
+2025-09-18 04:28:12,305 14296 INFO ? odoo.modules.loading: loading teknoparts_inventory/wizard/qc_check_wizard.xml 
+2025-09-18 04:28:12,318 14296 INFO ? odoo.modules.loading: loading teknoparts_inventory/wizard/stock_opname_wizard.xml 
+2025-09-18 04:28:12,320 14296 INFO ? odoo.modules.loading: loading teknoparts_inventory/wizard/advanced_print_wizard.xml 
+2025-09-18 04:28:12,342 14296 WARNING ? odoo.modules.loading: Transient module states were reset 
+2025-09-18 04:28:12,342 14296 ERROR ? odoo.modules.registry: Failed to load registry 
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 87, in __new__
+    return cls.registries[db_name]
+           ~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\venv\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\lru.py", line 34, in __getitem__
+    a = self.d[obj]
+        ~~~~~~^^^^^
+KeyError: 'ssi_odoo_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 110, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 481, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 366, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 229, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 73, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 635, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 680, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src\lxml\etree.pyx", line 3541, in lxml.etree.parse
+  File "src\lxml\parser.pxi", line 1900, in lxml.etree._parseDocument
+  File "src\lxml\parser.pxi", line 1920, in lxml.etree._parseFilelikeDocument
+  File "src\lxml\parser.pxi", line 1814, in lxml.etree._parseDocFromFilelike
+  File "src\lxml\parser.pxi", line 1204, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src\lxml\parser.pxi", line 618, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src\lxml\parser.pxi", line 728, in lxml.etree._handleParseResult
+  File "src\lxml\parser.pxi", line 657, in lxml.etree._raiseParseError
+  File "d:\coding\seriously\learn-odoo\odoo\custom_addons\teknoparts_inventory\wizard\advanced_print_wizard.xml", line 69
+lxml.etree.XMLSyntaxError: xmlParseEntityRef: no name, line 69, column 56
+2025-09-18 04:28:12,345 14296 ERROR ? odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 87, in __new__
+    return cls.registries[db_name]
+           ~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\venv\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\lru.py", line 34, in __getitem__
+    a = self.d[obj]
+        ~~~~~~^^^^^
+KeyError: 'ssi_odoo_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\http.py", line 2396, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\http.py", line 1949, in _serve_db
+    self.registry = Registry(self.db).check_signaling()
+                    ^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 89, in __new__
+    return cls.new(db_name)
+           ^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\venv\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 110, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 481, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 366, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 229, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 73, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 635, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 680, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src\lxml\etree.pyx", line 3541, in lxml.etree.parse
+  File "src\lxml\parser.pxi", line 1900, in lxml.etree._parseDocument
+  File "src\lxml\parser.pxi", line 1920, in lxml.etree._parseFilelikeDocument
+  File "src\lxml\parser.pxi", line 1814, in lxml.etree._parseDocFromFilelike
+  File "src\lxml\parser.pxi", line 1204, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src\lxml\parser.pxi", line 618, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src\lxml\parser.pxi", line 728, in lxml.etree._handleParseResult
+  File "src\lxml\parser.pxi", line 657, in lxml.etree._raiseParseError
+  File "d:\coding\seriously\learn-odoo\odoo\custom_addons\teknoparts_inventory\wizard\advanced_print_wizard.xml", line 69
+lxml.etree.XMLSyntaxError: xmlParseEntityRef: no name, line 69, column 56
+2025-09-18 04:28:12,348 14296 INFO ? werkzeug: 127.0.0.1 - - [18/Sep/2025 04:28:12] "GET / HTTP/1.1" 500 - 406 0.254 0.705
+2025-09-18 04:28:12,361 14296 INFO ? odoo.modules.loading: loading 1 modules... 
+2025-09-18 04:28:12,370 14296 INFO ? odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2025-09-18 04:28:12,382 14296 INFO ? odoo.modules.loading: loading 81 modules... 
+2025-09-18 04:28:12,436 14296 INFO ? odoo.modules.loading: Loading module teknoparts_inventory (78/81) 
+2025-09-18 04:28:12,768 14296 INFO ? odoo.modules.registry: module teknoparts_inventory: creating or updating database tables 
+2025-09-18 04:28:12,988 14296 INFO ? odoo.modules.loading: loading teknoparts_inventory/security/security.xml 
+2025-09-18 04:28:13,070 14296 INFO ? odoo.modules.loading: loading teknoparts_inventory/security/ir.model.access.csv 
+2025-09-18 04:28:13,087 14296 INFO ? odoo.modules.loading: loading teknoparts_inventory/security/part_rule.xml 
+2025-09-18 04:28:13,087 14296 INFO ? odoo.modules.loading: loading teknoparts_inventory/security/picking_rule.xml 
+2025-09-18 04:28:13,109 14296 INFO ? odoo.modules.loading: loading teknoparts_inventory/data/sequence.xml 
+2025-09-18 04:28:13,115 14296 INFO ? odoo.modules.loading: loading teknoparts_inventory/wizard/qc_check_wizard.xml 
+2025-09-18 04:28:13,127 14296 INFO ? odoo.modules.loading: loading teknoparts_inventory/wizard/stock_opname_wizard.xml 
+2025-09-18 04:28:13,142 14296 INFO ? odoo.modules.loading: loading teknoparts_inventory/wizard/advanced_print_wizard.xml 
+2025-09-18 04:28:13,151 14296 WARNING ? odoo.modules.loading: Transient module states were reset 
+2025-09-18 04:28:13,151 14296 ERROR ? odoo.modules.registry: Failed to load registry 
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 87, in __new__
+    return cls.registries[db_name]
+           ~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\venv\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\lru.py", line 34, in __getitem__
+    a = self.d[obj]
+        ~~~~~~^^^^^
+KeyError: 'ssi_odoo_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 110, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 481, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 366, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 229, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 73, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 635, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 680, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src\lxml\etree.pyx", line 3541, in lxml.etree.parse
+  File "src\lxml\parser.pxi", line 1900, in lxml.etree._parseDocument
+  File "src\lxml\parser.pxi", line 1920, in lxml.etree._parseFilelikeDocument
+  File "src\lxml\parser.pxi", line 1814, in lxml.etree._parseDocFromFilelike
+  File "src\lxml\parser.pxi", line 1204, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src\lxml\parser.pxi", line 618, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src\lxml\parser.pxi", line 728, in lxml.etree._handleParseResult
+  File "src\lxml\parser.pxi", line 657, in lxml.etree._raiseParseError
+  File "d:\coding\seriously\learn-odoo\odoo\custom_addons\teknoparts_inventory\wizard\advanced_print_wizard.xml", line 69
+lxml.etree.XMLSyntaxError: xmlParseEntityRef: no name, line 69, column 56
+2025-09-18 04:28:13,153 14296 ERROR ? odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 87, in __new__
+    return cls.registries[db_name]
+           ~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\venv\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\lru.py", line 34, in __getitem__
+    a = self.d[obj]
+        ~~~~~~^^^^^
+KeyError: 'ssi_odoo_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\http.py", line 2396, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\http.py", line 1949, in _serve_db
+    self.registry = Registry(self.db).check_signaling()
+                    ^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 89, in __new__
+    return cls.new(db_name)
+           ^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\venv\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 110, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 481, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 366, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 229, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 73, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 635, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 680, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src\lxml\etree.pyx", line 3541, in lxml.etree.parse
+  File "src\lxml\parser.pxi", line 1900, in lxml.etree._parseDocument
+  File "src\lxml\parser.pxi", line 1920, in lxml.etree._parseFilelikeDocument
+  File "src\lxml\parser.pxi", line 1814, in lxml.etree._parseDocFromFilelike
+  File "src\lxml\parser.pxi", line 1204, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src\lxml\parser.pxi", line 618, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src\lxml\parser.pxi", line 728, in lxml.etree._handleParseResult
+  File "src\lxml\parser.pxi", line 657, in lxml.etree._raiseParseError
+  File "d:\coding\seriously\learn-odoo\odoo\custom_addons\teknoparts_inventory\wizard\advanced_print_wizard.xml", line 69
+lxml.etree.XMLSyntaxError: xmlParseEntityRef: no name, line 69, column 56
+2025-09-18 04:28:13,156 14296 INFO ? werkzeug: 127.0.0.1 - - [18/Sep/2025 04:28:13] "GET / HTTP/1.1" 500 - 406 0.242 0.559
+2025-09-18 04:28:13,198 14296 INFO ? odoo.modules.loading: loading 1 modules... 
+2025-09-18 04:28:13,304 14296 INFO ? odoo.modules.loading: 1 modules loaded in 0.11s, 0 queries (+0 extra) 
+2025-09-18 04:28:13,320 14296 INFO ? odoo.modules.loading: loading 81 modules... 
+2025-09-18 04:28:13,370 14296 INFO ? odoo.modules.loading: Loading module teknoparts_inventory (78/81) 
+2025-09-18 04:28:13,706 14296 INFO ? odoo.modules.registry: module teknoparts_inventory: creating or updating database tables 
+2025-09-18 04:28:13,946 14296 INFO ? odoo.modules.loading: loading teknoparts_inventory/security/security.xml 
+2025-09-18 04:28:14,018 14296 INFO ? odoo.modules.loading: loading teknoparts_inventory/security/ir.model.access.csv 
+2025-09-18 04:28:14,046 14296 INFO ? odoo.modules.loading: loading teknoparts_inventory/security/part_rule.xml 
+2025-09-18 04:28:14,055 14296 INFO ? odoo.modules.loading: loading teknoparts_inventory/security/picking_rule.xml 
+2025-09-18 04:28:14,063 14296 INFO ? odoo.modules.loading: loading teknoparts_inventory/data/sequence.xml 
+2025-09-18 04:28:14,067 14296 INFO ? odoo.modules.loading: loading teknoparts_inventory/wizard/qc_check_wizard.xml 
+2025-09-18 04:28:14,078 14296 INFO ? odoo.modules.loading: loading teknoparts_inventory/wizard/stock_opname_wizard.xml 
+2025-09-18 04:28:14,094 14296 INFO ? odoo.modules.loading: loading teknoparts_inventory/wizard/advanced_print_wizard.xml 
+2025-09-18 04:28:14,103 14296 WARNING ? odoo.modules.loading: Transient module states were reset 
+2025-09-18 04:28:14,103 14296 ERROR ? odoo.modules.registry: Failed to load registry 
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 87, in __new__
+    return cls.registries[db_name]
+           ~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\venv\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\lru.py", line 34, in __getitem__
+    a = self.d[obj]
+        ~~~~~~^^^^^
+KeyError: 'ssi_odoo_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 110, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 481, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 366, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 229, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 73, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 635, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 680, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src\lxml\etree.pyx", line 3541, in lxml.etree.parse
+  File "src\lxml\parser.pxi", line 1900, in lxml.etree._parseDocument
+  File "src\lxml\parser.pxi", line 1920, in lxml.etree._parseFilelikeDocument
+  File "src\lxml\parser.pxi", line 1814, in lxml.etree._parseDocFromFilelike
+  File "src\lxml\parser.pxi", line 1204, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src\lxml\parser.pxi", line 618, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src\lxml\parser.pxi", line 728, in lxml.etree._handleParseResult
+  File "src\lxml\parser.pxi", line 657, in lxml.etree._raiseParseError
+  File "d:\coding\seriously\learn-odoo\odoo\custom_addons\teknoparts_inventory\wizard\advanced_print_wizard.xml", line 69
+lxml.etree.XMLSyntaxError: xmlParseEntityRef: no name, line 69, column 56
+2025-09-18 04:28:14,103 14296 ERROR ? odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 87, in __new__
+    return cls.registries[db_name]
+           ~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\venv\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\lru.py", line 34, in __getitem__
+    a = self.d[obj]
+        ~~~~~~^^^^^
+KeyError: 'ssi_odoo_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\http.py", line 2396, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\http.py", line 1949, in _serve_db
+    self.registry = Registry(self.db).check_signaling()
+                    ^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 89, in __new__
+    return cls.new(db_name)
+           ^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\venv\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\registry.py", line 110, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 481, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 366, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 229, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\modules\loading.py", line 73, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 635, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "D:\Coding\seriously\learn-odoo\odoo\odoo\tools\convert.py", line 680, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src\lxml\etree.pyx", line 3541, in lxml.etree.parse
+  File "src\lxml\parser.pxi", line 1900, in lxml.etree._parseDocument
+  File "src\lxml\parser.pxi", line 1920, in lxml.etree._parseFilelikeDocument
+  File "src\lxml\parser.pxi", line 1814, in lxml.etree._parseDocFromFilelike
+  File "src\lxml\parser.pxi", line 1204, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src\lxml\parser.pxi", line 618, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src\lxml\parser.pxi", line 728, in lxml.etree._handleParseResult
+  File "src\lxml\parser.pxi", line 657, in lxml.etree._raiseParseError
+  File "d:\coding\seriously\learn-odoo\odoo\custom_addons\teknoparts_inventory\wizard\advanced_print_wizard.xml", line 69
+lxml.etree.XMLSyntaxError: xmlParseEntityRef: no name, line 69, column 56
+2025-09-18 04:28:14,103 14296 INFO ? werkzeug: 127.0.0.1 - - [18/Sep/2025 04:28:14] "GET /favicon.ico HTTP/1.1" 500 - 406 0.275 0.638
+2025-09-18 04:29:46,923 14296 INFO ssi_odoo_db odoo.service.server: Initiating shutdown 
+2025-09-18 04:29:46,923 14296 INFO ssi_odoo_db odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2025-09-18 04:29:47,417 14296 INFO ssi_odoo_db odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 3 connections  

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_advanced_part_print_wizard_form" model="ir.ui.view">
+        <field name="name">Advanced Parts Print Wizard</field>
+        <field name="model">tpart.advanced.print.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Advanced Parts Print">
+                <header>
+                    <button name="action_preview" type="object" string="Preview" class="btn-secondary"/>
+                    <button name="action_reset_filters" type="object" string="Reset Filters" class="btn-secondary"/>
+                </header>
+
+                <sheet>
+                    <div class="oe_title">
+                        <h1>Advanced Parts Print Wizard</h1>
+                        <p>Configure filters and options for your parts report</p>
+                    </div>
+
+                    <notebook>
+                        <!-- FILTERS TAB -->
+                        <page string="🔍 Filters" name="filters">
+                            <group>
+                                <group string="Filter Type">
+                                    <field name="filter_type" widget="radio"/>
+                                    <field name="selected_part_ids"
+                                           invisible="filter_type != 'selected'"
+                                           widget="many2many_tags"/>
+                                </group>
+                            </group>
+
+                            <group invisible="filter_type != 'custom'">
+                                <group string="Product Filters">
+                                    <field name="brand_ids" widget="many2many_tags"
+                                           options="{'no_create': True}"/>
+                                    <field name="category_ids" widget="many2many_tags"/>
+                                    <field name="part_type_ids" widget="many2many_tags"
+                                           options="{'no_create': True}"/>
+                                    <field name="state_filter"/>
+                                </group>
+
+                                <group string="Stock Filters">
+                                    <field name="stock_filter"/>
+                                    <field name="stock_min"
+                                           invisible="stock_filter != 'custom_range'"/>
+                                    <field name="stock_max"
+                                           invisible="stock_filter != 'custom_range'"/>
+                                </group>
+                            </group>
+
+                            <group invisible="filter_type != 'custom'">
+                                <group string="Date Filters">
+                                    <field name="date_filter"/>
+                                    <field name="date_from"
+                                           invisible="date_filter != 'created_custom'"/>
+                                    <field name="date_to"
+                                           invisible="date_filter != 'created_custom'"/>
+                                </group>
+
+                                <group string="Sorting">
+                                    <field name="sort_by"/>
+                                    <field name="sort_order"/>
+                                </group>
+                            </group>
+                        </page>
+
+                        <!-- OUTPUT OPTIONS TAB -->
+                        <page string="📄 Output Options" name="output">
+                            <group>
+                                <group string="Format & Layout">
+                                    <field name="output_format" widget="radio"/>
+                                    <field name="page_break_per_part"/>
+                                    <field name="show_barcode"/>
+                                </group>
+
+                                <group string="Content Options">
+                                    <field name="include_images"/>
+                                    <field name="include_stock_history"/>
+                                    <field name="include_qc_history"/>
+                                    <field name="include_purchase_history"/>
+                                </group>
+                            </group>
+
+                            <group>
+                                <group string="Grouping">
+                                    <field name="group_by_category"/>
+                                    <field name="group_by_brand"/>
+                                </group>
+
+                                <group string="Summary">
+                                    <field name="show_summary"/>
+                                </group>
+                            </group>
+                        </page>
+
+                        <!-- PREVIEW TAB -->
+                        <page string="👁️ Preview" name="preview">
+                            <group>
+                                <group string="Preview Settings">
+                                    <field name="preview_limit"/>
+                                </group>
+                            </group>
+
+                            <group string="Summary Statistics" col="4">
+                                <field name="summary_total_parts" readonly="1"/>
+                                <field name="summary_total_value" readonly="1"
+                                       widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                <newline/>
+                                <field name="summary_by_brand" readonly="1" colspan="4" nolabel="1"/>
+                            </group>
+
+                            <separator string="Data Preview"/>
+                            <field name="preview_data" readonly="1" nolabel="1"
+                                   widget="text" placeholder="Click 'Preview' to see filtered data..."/>
+                        </page>
+
+                        <!-- ADVANCED TAB -->
+                        <page string="⚙️ Advanced" name="advanced">
+                            <group>
+                                <group string="PDF Options"
+                                       invisible="output_format not in ['pdf_detailed', 'pdf_summary']">
+                                    <label string="PDF-specific options will be here"/>
+                                </group>
+
+                                <group string="Excel Options"
+                                       invisible="'excel' not in output_format">
+                                    <label string="Excel-specific options will be here"/>
+                                </group>
+                            </group>
+
+                            <group string="Template Customization">
+                                <p>Future: Custom templates, logos, headers, footers</p>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+
+                <footer>
+                    <button name="action_print" type="object" string="🖨️ Generate Report"
+                            class="oe_highlight"/>
+                    <button name="action_preview" type="object" string="👁️ Preview"
+                            class="btn-secondary"/>
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- ACTION -->
+    <record id="action_advanced_part_print_wizard" model="ir.actions.act_window">
+        <field name="name">Advanced Print Parts</field>
+        <field name="res_model">tpart.advanced.print.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="model_tpart_part"/>
+        <field name="binding_view_types">list,form</field>
+    </record>
+
+    <!-- Menu Item -->
+    <menuitem id="menu_advanced_print_parts"
+              name="📊 Advanced Print Parts"
+              parent="menu_teknoparts_root"
+              action="action_advanced_part_print_wizard"
+              sequence="35"/>
+</odoo>

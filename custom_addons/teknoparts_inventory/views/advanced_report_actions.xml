@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Advanced PDF Reports -->
+    <record id="action_advanced_parts_detailed_pdf" model="ir.actions.report">
+        <field name="name">Advanced Parts Detailed (PDF)</field>
+        <field name="model">tpart.advanced.print.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">tpart.advanced.pdf.detailed</field>
+        <field name="report_file">tpart_advanced_pdf_detailed</field>
+        <field name="print_report_name">'Advanced_Parts_Detailed_%s' % (datetime.datetime.now().strftime('%Y%m%d_%H%M%S'))</field>
+    </record>
+
+    <record id="action_advanced_parts_summary_pdf" model="ir.actions.report">
+        <field name="name">Advanced Parts Summary (PDF)</field>
+        <field name="model">tpart.advanced.print.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">tpart.advanced.pdf.summary</field>
+        <field name="report_file">tpart_advanced_pdf_summary</field>
+        <field name="print_report_name">'Advanced_Parts_Summary_%s' % (datetime.datetime.now().strftime('%Y%m%d_%H%M%S'))</field>
+    </record>
+
+    <!-- Advanced Excel Reports -->
+    <record id="action_advanced_parts_detailed_xlsx" model="ir.actions.report">
+        <field name="name">Advanced Parts Detailed (Excel)</field>
+        <field name="model">tpart.advanced.print.wizard</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">tpart.advanced.xlsx.detailed</field>
+        <field name="print_report_name">'Advanced_Parts_Detailed_%s' % (datetime.datetime.now().strftime('%Y%m%d_%H%M%S'))</field>
+    </record>
+
+    <record id="action_advanced_parts_summary_xlsx" model="ir.actions.report">
+        <field name="name">Advanced Parts Summary (Excel)</field>
+        <field name="model">tpart.advanced.print.wizard</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">tpart.advanced.xlsx.summary</field>
+        <field name="print_report_name">'Advanced_Parts_Summary_%s' % (datetime.datetime.now().strftime('%Y%m%d_%H%M%S'))</field>
+    </record>
+
+    <record id="action_advanced_kartu_stock_multiple_xlsx" model="ir.actions.report">
+        <field name="name">Advanced Multiple Kartu Stock (Excel)</field>
+        <field name="model">tpart.advanced.print.wizard</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">tpart.advanced.xlsx.kartu</field>
+        <field name="print_report_name">'Advanced_Kartu_Stock_%s' % (datetime.datetime.now().strftime('%Y%m%d_%H%M%S'))</field>
+    </record>
+
+    <!-- Quick Action Buttons -->
+    <record id="action_quick_print_all_parts" model="ir.actions.act_window">
+        <field name="name">📊 Quick Print All Parts</field>
+        <field name="res_model">tpart.advanced.print.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{
+            'default_filter_type': 'all',
+            'default_output_format': 'excel_detailed',
+            'default_show_summary': True,
+            'default_include_stock_history': True
+        }</field>
+    </record>
+
+    <record id="action_quick_print_low_stock" model="ir.actions.act_window">
+        <field name="name">⚠️ Quick Print Low Stock Parts</field>
+        <field name="res_model">tpart.advanced.print.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{
+            'default_filter_type': 'custom',
+            'default_stock_filter': 'low_stock',
+            'default_output_format': 'pdf_summary',
+            'default_show_summary': True
+        }</field>
+    </record>
+
+    <record id="action_quick_print_out_of_stock" model="ir.actions.act_window">
+        <field name="name">🚨 Quick Print Out of Stock</field>
+        <field name="res_model">tpart.advanced.print.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{
+            'default_filter_type': 'custom',
+            'default_stock_filter': 'out_of_stock',
+            'default_output_format': 'excel_summary',
+            'default_show_summary': True
+        }</field>
+    </record>
+
+    <!-- Submenu for Quick Reports -->
+    <menuitem id="menu_quick_reports" name="📈 Quick Reports" parent="menu_teknoparts_root" sequence="40"/>
+
+    <menuitem id="menu_quick_print_all" name="All Parts Report"
+              parent="menu_quick_reports"
+              action="action_quick_print_all_parts"
+              sequence="10"/>
+
+    <menuitem id="menu_quick_low_stock" name="Low Stock Alert"
+              parent="menu_quick_reports"
+              action="action_quick_print_low_stock"
+              sequence="20"/>
+
+    <menuitem id="menu_quick_out_stock" name="Out of Stock Report"
+              parent="menu_quick_reports"
+              action="action_quick_print_out_of_stock"
+              sequence="30"/>
+
+    <!-- Server Actions for Automation -->
+    <record id="server_action_daily_stock_report" model="ir.actions.server">
+        <field name="name">Daily Stock Report</field>
+        <field name="model_id" ref="model_tpart_part"/>
+        <field name="state">code</field>
+        <field name="code">
+# Generate daily stock report
+parts = env['tpart.part'].search([('state', '=', 'approved')])
+wizard = env['tpart.advanced.print.wizard'].create({
+    'filter_type': 'custom',
+    'state_filter': 'approved',
+    'output_format': 'excel_detailed',
+    'show_summary': True,
+    'include_stock_history': False,
+    'group_by_brand': True,
+})
+
+# You can add email logic here or save to a shared location
+action = {
+    'type': 'ir.actions.client',
+    'tag': 'display_notification',
+    'params': {
+        'title': 'Daily Report Generated',
+        'message': f'Daily stock report generated for {len(parts)} parts.',
+        'type': 'success',
+        'sticky': False,
+    }
+}
+        </field>
+    </record>
+
+    <!-- Cron Job for Automated Reports -->
+    <record id="cron_daily_stock_report" model="ir.cron">
+        <field name="name">Daily Stock Report</field>
+        <field name="model_id" ref="model_tpart_part"/>
+        <field name="state">code</field>
+        <field name="code">env.ref('teknoparts_inventory.server_action_daily_stock_report').run()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="active" eval="False"/>  <!-- Disabled by default -->
+    </record>
+</odoo>
